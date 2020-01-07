@@ -1,0 +1,13 @@
+.gitignore
+.idea/.gitignore
+.idea/cpu_indicator.iml
+.idea/deployment.xml
+.idea/encodings.xml
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+__pycache__/
+build/
+dist/
+test.py
