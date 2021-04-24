@@ -1,4 +1,3 @@
-import math
 import time
 from threading import Thread
 
@@ -35,7 +34,11 @@ class Indicator:
             if self.stopped is True:
                 return
 
-            usage = math.ceil(cpu_percent(interval=0))
+            # ceil the usage without the math lib
+            # to decrease the size of the .exe file
+            # (this most likely didnt help at all)
+            usage = cpu_percent(interval=0)
+            usage = int(- (-usage // 1))
 
             # decide bg depending on usage
             image = self.RED_BG.copy() if usage > 70 else self.BLUE_BG.copy()
